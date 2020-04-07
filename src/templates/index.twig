@@ -1,0 +1,46 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Content Builder plugin for Craft CMS 3.x
+ *
+ * Content Builder index.twig
+ *
+ * @author    Stefanie Gevaert
+ * @copyright Copyright (c) 2020 Stefanie Gevaert
+ * @link      https://github.com/KoeketieneDesign
+ * @package   ContentBuilder
+ * @since     1.0.0
+ */
+#}
+
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("koeketienedesign\\contentbuilder\\assetbundles\\contentbuilder\\ContentBuilderAsset") %}
+{% do view.registerAssetBundle("koeketienedesign\\contentbuilder\\assetbundles\\indexcpsection\\IndexCPSectionAsset") %}
+
+{# Link for the ? icon at the bottom of the page #}
+{% set docsUrl = "https://github.com/KoeketieneDesign/content-builder/blob/master/README.md" %}
+
+{# The title of this CP section #}
+{% set title = "Content Builder" %}
+
+{# The URL to this plugin's base CP section #}
+{% set pluginCpUrl = url('content-builder') %}
+
+{# Get a URL to an image in our AssetBundle #}
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@koeketienedesign/contentbuilder/assetbundles/indexcpsection/dist', true) ~ '/img/Index-icon.svg' %}
+
+{# Content that should appear in the page header#}
+{% set extraPageHeaderHtml %}
+    <div class="buttons">
+        <a href="{{ pluginCpUrl }}" class="btn submit add icon">{{ "Click Me!"|t('content-builder') }}</a>
+    </div>
+{% endset %}
+
+{# The content of the CP Section#}
+{% set content %}
+    <h2>{{ "Index CP Section body goes here"|t('content-builder') }}</h2>
+    <img src="{{ iconUrl }}" height="64" width="64" />
+    <p class="textline"></p>
+{% endset %}

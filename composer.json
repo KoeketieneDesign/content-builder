@@ -1,0 +1,41 @@
+{
+    "name": "koeketienedesign/content-builder",
+    "description": "A field type to easily create a content builder for each content page. ",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "content builder"
+    ],
+    "support": {
+        "docs": "https://github.com/KoeketieneDesign/content-builder/blob/master/README.md",
+        "issues": "https://github.com/KoeketieneDesign/content-builder/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Stefanie Gevaert",
+            "homepage": "https://github.com/KoeketieneDesign"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "koeketienedesign\\contentbuilder\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Content Builder",
+        "handle": "content-builder",
+        "developer": "Stefanie Gevaert",
+        "developerUrl": "https://github.com/KoeketieneDesign",
+        "documentationUrl": "https://github.com/KoeketieneDesign/content-builder/blob/master/README.md",
+        "changelogUrl": "https://raw.githubusercontent.com/KoeketieneDesign/content-builder/master/CHANGELOG.md",
+        "class": "koeketienedesign\\contentbuilder\\ContentBuilder"
+    }
+}

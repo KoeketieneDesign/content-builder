@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Content Builder plugin for Craft CMS 3.x
+ *
+ * Content Builder Settings.twig
+ *
+ * @author    Stefanie Gevaert
+ * @copyright Copyright (c) 2020 Stefanie Gevaert
+ * @link      https://github.com/KoeketieneDesign
+ * @package   ContentBuilder
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("koeketienedesign\\contentbuilder\\assetbundles\\contentbuilder\\ContentBuilderAsset") %}
+
+{{ forms.textField({
+    label: 'Some Field',
+    instructions: 'Enter some setting here.',
+    id: 'someAttribute',
+    name: 'someAttribute',
+    value: settings['someAttribute']})
+}}
